@@ -108,7 +108,74 @@ def init_db() -> None:
 
 
 def save_order(order: dict) -> dict:
-    pass
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        INSERT INTO orders (
+            cliente,
+            telefono,
+            zona,
+            direccion,
+            urgencia,
+            hora_limite,
+            observaciones,
+            estado,
+            score_prioridad,
+            errores
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        order.get("cliente"),
+        order.get("telefono"),
+        order.get("zona"),
+        order.get("direccion"),
+        order.get("urgencia"),
+        order.get("hora_limite"),
+        order.get("observaciones"),
+        order.get("estado", "recibido"),
+        order.get("score_prioridad", 100),
+        order.get("errores")
+    ))
+
+    order_id = cursor.lastrowid
+
+    productos = order.get("productos", [])
+
+    for producto in productos:
+        cursor.execute("""
+            INSERT INTO order_products (
+                order_id,
+                nombre,
+                cantidad,
+                unidad
+            )
+            VALUES (?, ?, ?, ?)
+        """, (
+            order_id,
+            producto.get("nombre"),
+            producto.get("cantidad"),
+            producto.get("unidad")
+        ))
+
+    conn.commit()
+    conn.close()
+
+    return {
+        "id": order_id,
+        "cliente": order.get("cliente"),
+        "telefono": order.get("telefono"),
+        "zona": order.get("zona"),
+        "direccion": order.get("direccion"),
+        "productos": productos,
+        "urgencia": order.get("urgencia"),
+        "hora_limite": order.get("hora_limite"),
+        "observaciones": order.get("observaciones"),
+        "estado": order.get("estado", "recibido"),
+        "score_prioridad": order.get("score_prioridad", 100),
+        "errores": order.get("errores")
+    }
 
 def get_all_orders() -> list[dict]:
     pass
