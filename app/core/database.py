@@ -237,11 +237,125 @@ def get_status_summary() -> dict:
 
 
 def get_orders_by_status(status: str) -> list[dict]:
-    pass
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT *
+        FROM orders
+        WHERE estado = ?
+        ORDER BY id ASC
+    """, (status,))
+
+    rows = cursor.fetchall()
+
+    orders = []
+
+    for row in rows:
+
+        cursor.execute("""
+            SELECT nombre, cantidad, unidad
+            FROM order_products
+            WHERE order_id = ?
+        """, (row["id"],))
+
+        productos_rows = cursor.fetchall()
+
+        productos = [
+            {
+                "nombre": producto["nombre"],
+                "cantidad": producto["cantidad"],
+                "unidad": producto["unidad"]
+            }
+            for producto in productos_rows
+        ]
+
+        order = {
+            "id": row["id"],
+            "cliente": row["cliente"],
+            "telefono": row["telefono"],
+            "zona": row["zona"],
+            "direccion": row["direccion"],
+            "productos": productos,
+            "urgencia": row["urgencia"],
+            "hora_limite": row["hora_limite"],
+            "observaciones": row["observaciones"],
+            "estado": row["estado"],
+            "score_prioridad": row["score_prioridad"],
+            "errores": row["errores"]
+        }
+
+        orders.append(order)
+
+    conn.close()
+
+    return orders
 
 
-def update_order_status(order_id: int, status: str) -> dict | None:
-    pass
+def update_order_status(
+    order_id: int,
+    status: str
+) -> dict | None:
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        UPDATE orders
+        SET estado = ?
+        WHERE id = ?
+    """, (status, order_id))
+
+    conn.commit()
+
+    cursor.execute("""
+        SELECT *
+        FROM orders
+        WHERE id = ?
+    """, (order_id,))
+
+    row = cursor.fetchone()
+
+    if row is None:
+        conn.close()
+        return None
+
+    cursor.execute("""
+        SELECT nombre, cantidad, unidad
+        FROM order_products
+        WHERE order_id = ?
+    """, (order_id,))
+
+    productos_rows = cursor.fetchall()
+
+    productos = [
+        {
+            "nombre": producto["nombre"],
+            "cantidad": producto["cantidad"],
+            "unidad": producto["unidad"]
+        }
+        for producto in productos_rows
+    ]
+
+    order = {
+        "id": row["id"],
+        "cliente": row["cliente"],
+        "telefono": row["telefono"],
+        "zona": row["zona"],
+        "direccion": row["direccion"],
+        "productos": productos,
+        "urgencia": row["urgencia"],
+        "hora_limite": row["hora_limite"],
+        "observaciones": row["observaciones"],
+        "estado": row["estado"],
+        "score_prioridad": row["score_prioridad"],
+        "errores": row["errores"]
+    }
+
+    conn.close()
+
+    return order
 
 
 def save_log(event: str, detail: str) -> None:
