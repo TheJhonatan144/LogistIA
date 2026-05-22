@@ -233,7 +233,39 @@ def get_all_orders() -> list[dict]:
     return orders
 
 def get_status_summary() -> dict:
-    pass
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    estados_oficiales = [
+        "recibido",
+        "pendiente_datos",
+        "listo_para_despacho",
+        "planificado",
+        "en_ruta",
+        "entregado",
+        "cancelado"
+    ]
+
+    summary = {
+        estado: 0
+        for estado in estados_oficiales
+    }
+
+    cursor.execute("""
+        SELECT estado, COUNT(*) as total
+        FROM orders
+        GROUP BY estado
+    """)
+
+    rows = cursor.fetchall()
+
+    for row in rows:
+        summary[row["estado"]] = row["total"]
+
+    conn.close()
+
+    return summary
 
 
 def get_orders_by_status(status: str) -> list[dict]:
@@ -358,5 +390,26 @@ def update_order_status(
     return order
 
 
-def save_log(event: str, detail: str) -> None:
-    pass
+def save_log(
+    event: str,
+    detail: str
+) -> None:
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        INSERT INTO logs (
+            event,
+            detail,
+            level
+        )
+        VALUES (?, ?, ?)
+    """, (
+        event,
+        detail,
+        "INFO"
+    ))
+
+    conn.commit()
+    conn.close()
