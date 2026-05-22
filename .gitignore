@@ -13,6 +13,9 @@ __pycache__/
 .env.local
 
 # SQLite / bases locales
+data/*.db
+data/*.sqlite
+data/*.sqlite3
 *.db
 *.sqlite
 *.sqlite3
