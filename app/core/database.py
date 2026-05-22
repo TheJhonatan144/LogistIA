@@ -178,7 +178,59 @@ def save_order(order: dict) -> dict:
     }
 
 def get_all_orders() -> list[dict]:
-    pass
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT *
+        FROM orders
+        ORDER BY id ASC
+    """)
+
+    rows = cursor.fetchall()
+
+    orders = []
+
+    for row in rows:
+
+        cursor.execute("""
+            SELECT nombre, cantidad, unidad
+            FROM order_products
+            WHERE order_id = ?
+        """, (row["id"],))
+
+        productos_rows = cursor.fetchall()
+
+        productos = [
+            {
+                "nombre": producto["nombre"],
+                "cantidad": producto["cantidad"],
+                "unidad": producto["unidad"]
+            }
+            for producto in productos_rows
+        ]
+
+        order = {
+            "id": row["id"],
+            "cliente": row["cliente"],
+            "telefono": row["telefono"],
+            "zona": row["zona"],
+            "direccion": row["direccion"],
+            "productos": productos,
+            "urgencia": row["urgencia"],
+            "hora_limite": row["hora_limite"],
+            "observaciones": row["observaciones"],
+            "estado": row["estado"],
+            "score_prioridad": row["score_prioridad"],
+            "errores": row["errores"]
+        }
+
+        orders.append(order)
+
+    conn.close()
+
+    return orders
 
 def get_status_summary() -> dict:
     pass
