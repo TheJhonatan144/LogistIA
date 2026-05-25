@@ -1,0 +1,87 @@
+[
+  {
+    "input": "La señora Carmen de La Magdalena necesita 2 quintales de arroz y una caja de aceite.",
+    "output": {
+      "cliente": "Carmen",
+      "zona": "de La Magdalena",
+      "productos": [
+        {
+          "nombre": "arroz",
+          "cantidad": 2,
+          "unidad": "quintales"
+        },
+        {
+          "nombre": "aceite",
+          "cantidad": 1,
+          "unidad": "caja"
+        }
+      ],
+      "urgencia": null,
+      "estado": "recibido"
+    }
+  },
+  {
+    "input": "Don Luis del Condado pidió 3 cajas de leche.",
+    "output": {
+      "cliente": "Luis",
+      "zona": "Condado",
+      "productos": [
+        {
+          "nombre": "leche",
+          "cantidad": 3,
+          "unidad": "cajas"
+        }
+      ],
+      "urgencia": null,
+      "estado": "recibido"
+    }
+  },
+  {
+    "input": "Cliente María en La Carolina necesita 5 fundas de azúcar.",
+    "output": {
+      "cliente": "María",
+      "zona": "La Carolina",
+      "productos": [
+        {
+          "nombre": "fundas de azúcar",
+          "cantidad": 5,
+          "unidad": null
+        }
+      ],
+      "urgencia": null,
+      "estado": "recibido"
+    }
+  },
+  {
+    "input": "Enviar 2 cajas de aceite a Pedro, sector Sur.",
+    "output": {
+      "cliente": "Pedro",
+      "zona": "Sur",
+      "productos": [
+        {
+          "nombre": "aceite",
+          "cantidad": 2,
+          "unidad": "cajas"
+        }
+      ],
+      "urgencia": null,
+      "estado": "recibido"
+    }
+  },
+  {
+    "input": "Necesito entregar arroz a Juan.",
+    "output": {
+      "cliente": "Juan",
+      "zona": null,
+      "productos": [
+        {
+          "nombre": "arroz",
+          "cantidad": null,
+          "unidad": null
+        }
+      ],
+      "urgencia": null,
+      "estado": "pendiente_datos"
+    }
+  }
+]
