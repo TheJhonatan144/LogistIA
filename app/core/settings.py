@@ -1,0 +1,7 @@
+# Configuracion temporal del backend.
+# True = usar implementaciones simuladas.
+# False = usar implementaciones reales cuando esten listas SQLite.
+
+USE_MOCK_DB = False
+USE_MOCK_LLM = True
+USE_MOCK_ROUTING = True
