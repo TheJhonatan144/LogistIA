@@ -1,0 +1,67 @@
+{
+  "name": "telegram_send_message",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "1bc899e6-3b2c-421c-9d22-82c7e3cd60c0",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "chatId": "8903651034",
+        "text": "Hola desde LogistIA",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "8f4742ee-1425-4569-a6e5-5f63fa05ce98",
+      "name": "Send a text message",
+      "webhookId": "763a5145-e049-45ba-b879-5e75b454cd5a",
+      "credentials": {
+        "telegramApi": {
+          "id": "KLBkhKbnzqcPl1sW",
+          "name": "Telegram account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "1b60b526-883b-4e2b-a26f-943694cad403",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e59aec0779789ecb2bc545c0971cd4bca064e2272dc8d20faacd2cfd748297d9"
+  },
+  "id": "KokIQTrRD86PQ8jC",
+  "tags": []
+}
