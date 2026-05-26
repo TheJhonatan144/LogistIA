@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Permitir conexión entre Telegram y LogistiAI mediante n8n.
+Permitir conexión entre Telegram y LogistIA mediante n8n.
 
 ## Flujo esperado
 
