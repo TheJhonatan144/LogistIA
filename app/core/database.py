@@ -1,4 +1,5 @@
 import sqlite3
+import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -21,14 +22,14 @@ def init_db() -> None:
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS orders (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        cliente TEXT NOT NULL,
+        cliente TEXT,
         telefono TEXT,
         zona TEXT,
         direccion TEXT,
         urgencia TEXT,
         hora_limite TEXT,
         observaciones TEXT,
-        estado TEXT NOT NULL,
+        estado TEXT,
         score_prioridad INTEGER DEFAULT 100,
         errores TEXT,
         created_at TEXT DEFAULT CURRENT_TIMESTAMP
@@ -38,13 +39,13 @@ def init_db() -> None:
     # Tabla productos del pedido
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS order_products (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        order_id INTEGER NOT NULL,
-        nombre TEXT NOT NULL,
-        cantidad REAL NOT NULL,
-        unidad TEXT NOT NULL,
-        FOREIGN KEY(order_id) REFERENCES orders(id)
-    )
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    order_id INTEGER NOT NULL,
+    nombre TEXT,
+    cantidad REAL,
+    unidad TEXT,
+    FOREIGN KEY(order_id) REFERENCES orders(id)
+)
     """)
 
     # Tabla zonas
@@ -136,7 +137,7 @@ def save_order(order: dict) -> dict:
         order.get("observaciones"),
         order.get("estado", "recibido"),
         order.get("score_prioridad", 100),
-        order.get("errores")
+        json.dumps(order.get("errores"))
     ))
 
     order_id = cursor.lastrowid
@@ -176,6 +177,15 @@ def save_order(order: dict) -> dict:
         "score_prioridad": order.get("score_prioridad", 100),
         "errores": order.get("errores")
     }
+    
+def parse_errors(value):
+    if value is None:
+        return None
+
+    try:
+        return json.loads(value)
+    except Exception:
+        return value
 
 def get_all_orders() -> list[dict]:
 
@@ -223,7 +233,7 @@ def get_all_orders() -> list[dict]:
             "observaciones": row["observaciones"],
             "estado": row["estado"],
             "score_prioridad": row["score_prioridad"],
-            "errores": row["errores"]
+            "errores": parse_errors(row["errores"])
         }
 
         orders.append(order)
@@ -315,7 +325,7 @@ def get_orders_by_status(status: str) -> list[dict]:
             "observaciones": row["observaciones"],
             "estado": row["estado"],
             "score_prioridad": row["score_prioridad"],
-            "errores": row["errores"]
+            "errores": parse_errors(row["errores"])
         }
 
         orders.append(order)
@@ -382,7 +392,7 @@ def update_order_status(
         "observaciones": row["observaciones"],
         "estado": row["estado"],
         "score_prioridad": row["score_prioridad"],
-        "errores": row["errores"]
+        "errores": parse_errors(row["errores"])
     }
 
     conn.close()
