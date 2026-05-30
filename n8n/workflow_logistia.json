@@ -1,0 +1,357 @@
+{
+  "name": "workflow_logistia",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "9e1c3de0-c6ad-47b5-9af2-a3c1d1aa0140",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1,
+      "position": [
+        -576,
+        224
+      ],
+      "webhookId": "1d53a27b-e0bd-4aaf-870e-af890bcbeaa5",
+      "credentials": {
+        "telegramApi": {
+          "id": "HhgJ7upsndrM1vSs",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "/ayuda",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and",
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                }
+              },
+              "renameOutput": true,
+              "outputKey": "ayuda"
+            },
+            {
+              "conditions": {
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "/estado",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and",
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                }
+              },
+              "renameOutput": true,
+              "outputKey": "estado"
+            },
+            {
+              "conditions": {
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "/planificar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and",
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                }
+              },
+              "renameOutput": true,
+              "outputKey": "planificar"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "5236d2d1-42e9-4c30-ae0f-c1cdba962cea",
+      "name": "Switch Comandos",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -320,
+        224
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "Hola, soy el bot de LogistIA.\n\nComandos disponibles:\n/ayuda - Ver comandos disponibles\n/estado - Consultar estado del sistema\n/planificar - Generar plan de despacho\n\nTambién puedes registrar un pedido escribiendo algo como:\nLa señora Carmen necesita arroz urgente en La Magdalena",
+        "additionalFields": {}
+      },
+      "id": "09aa8261-763c-469d-b243-077bba5ee221",
+      "name": "Responder Ayuda",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        96,
+        -96
+      ],
+      "webhookId": "83b4b2bc-d562-4b00-a863-7bfb30cf293c",
+      "credentials": {
+        "telegramApi": {
+          "id": "HhgJ7upsndrM1vSs",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8000/api/status",
+        "options": {}
+      },
+      "id": "5cefc14b-16bb-44e0-a508-2bef59e9fc0a",
+      "name": "GET Estado Backend",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        96,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ \"Estado del sistema:\\n\" + JSON.stringify($json, null, 2) }}",
+        "additionalFields": {}
+      },
+      "id": "5dfd3f78-4060-4677-b5e8-0b5d3ce37b8b",
+      "name": "Responder Estado",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        352,
+        96
+      ],
+      "webhookId": "c01690d6-07ec-4c7b-8ae3-2e829310bf04",
+      "credentials": {
+        "telegramApi": {
+          "id": "HhgJ7upsndrM1vSs",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/api/dispatch/plan",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "3aba9387-4a8c-4ec6-b493-a38cc7a4b47f",
+      "name": "POST Planificar Despacho",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        32,
+        336
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/api/orders",
+        "sendBody": true,
+        "contentType": "json",
+        "bodyParameters": {
+        "parameters": [
+          {
+            "name": "message",
+            "value": "={{ $('Telegram Trigger').item.json.message.text }}"
+          }
+        ]
+      },
+      "options": {}
+      },
+      "id": "57b3cc1f-6b42-43a2-9c01-ac59cc8fb2a1",
+      "name": "POST Crear Pedido",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        0,
+        544
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$('Telegram Trigger').item.json.message.chat.id}}",
+        "text": "Pedido registrado correctamente",
+        "additionalFields": {}
+      },
+      "id": "f7b33869-52a6-43cb-8361-830495c17b90",
+      "name": "Responder Pedido",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        272,
+        544
+      ],
+      "webhookId": "dbe5ede4-63f9-45c2-94fc-48d08c796272",
+      "credentials": {
+        "telegramApi": {
+          "id": "HhgJ7upsndrM1vSs",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ \"Planificacion lista\\n\\nPedidos: \" + $json.total_orders + \"\\nDistancia total: \" + $json.route.total_distance_km + \" km\\nTiempo estimado: \" + $json.route.total_time_min + \" min\" }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        336,
+        368
+      ],
+      "id": "0c64eabd-1980-4944-837f-be4e6e169bae",
+      "name": "Responder Planificacion",
+      "webhookId": "993c79ea-6736-46e6-92c7-16ace3dcb958",
+      "credentials": {
+        "telegramApi": {
+          "id": "HhgJ7upsndrM1vSs",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch Comandos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Comandos": {
+      "main": [
+        [
+          {
+            "node": "Responder Ayuda",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "GET Estado Backend",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "POST Planificar Despacho",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "POST Crear Pedido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GET Estado Backend": {
+      "main": [
+        [
+          {
+            "node": "Responder Estado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "POST Planificar Despacho": {
+      "main": [
+        [
+          {
+            "node": "Responder Planificacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "POST Crear Pedido": {
+      "main": [
+        [
+          {
+            "node": "Responder Pedido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "2777fc6e-f5c5-4870-9c5a-71156d46bb0a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "b2b93a406cc2b585d42a400028c2aeef2eb5d79b3e60905f6f40eaeefac5876d"
+  },
+  "id": "Xe9Ayr5BbfECoCOF",
+  "tags": []
+}

@@ -1,15 +1,14 @@
-# Orquestacion llama al mock -> valida campos -> asigna estados -> calcula prioridad ->guarda mock en BD ->genra el plan
-
-#Anterior
 from app.core.settings import (
     USE_MOCK_DB,
     USE_MOCK_LLM,
-    USE_MOCK_ROUTING
+    USE_MOCK_ROUTING,
+    USE_RULE_EXTRACTOR,
 )
 
 from app.core.logger import log_info, log_error
 from app.services.validation_service import validate_order
 from app.services.priority_service import calculate_priority
+from app.services.rule_extractor_service import extract_order_with_rules
 
 
 if USE_MOCK_LLM:
@@ -22,13 +21,13 @@ if USE_MOCK_DB:
     from app.mocks.mock_db import (
         save_order,
         get_all_orders,
-        get_status_summary
+        get_status_summary,
     )
 else:
     from app.core.database import (
         save_order,
         get_all_orders,
-        get_status_summary
+        get_status_summary,
     )
 
 
@@ -42,7 +41,14 @@ def process_order(message: str) -> dict:
     try:
         log_info("ORDER_PROCESS_STARTED", "Inicio del procesamiento de pedido")
 
-        order_data = extract_order_from_text(message)
+        if USE_RULE_EXTRACTOR:
+            order_data = extract_order_with_rules(message)
+            is_valid, errors = validate_order(order_data)
+
+            if not is_valid:
+                order_data = extract_order_from_text(message)
+        else:
+            order_data = extract_order_from_text(message)
 
         is_valid, errors = validate_order(order_data)
 
@@ -54,7 +60,7 @@ def process_order(message: str) -> dict:
 
             log_info(
                 "ORDER_PENDING_DATA",
-                f"Pedido guardado con datos pendientes. ID: {saved_order.get('id')}"
+                f"Pedido guardado con datos pendientes. ID: {saved_order.get('id')}",
             )
 
             return saved_order
@@ -67,7 +73,7 @@ def process_order(message: str) -> dict:
 
         log_info(
             "ORDER_CREATED",
-            f"Pedido creado correctamente. ID: {saved_order.get('id')}"
+            f"Pedido creado correctamente. ID: {saved_order.get('id')}",
         )
 
         return saved_order
@@ -83,7 +89,7 @@ def list_orders() -> list[dict]:
 
         log_info(
             "ORDERS_LISTED",
-            f"Consulta de pedidos realizada. Total: {len(orders)}"
+            f"Consulta de pedidos realizada. Total: {len(orders)}",
         )
 
         return orders
@@ -99,7 +105,7 @@ def get_status() -> dict:
 
         log_info(
             "STATUS_SUMMARY_REQUESTED",
-            "Resumen de estados consultado"
+            "Resumen de estados consultado",
         )
 
         return status
@@ -113,7 +119,8 @@ def generate_dispatch_plan() -> dict:
     try:
         orders = get_all_orders()
         ready_orders = [
-            order for order in orders
+            order
+            for order in orders
             if order.get("estado") in ["recibido", "listo_para_despacho"]
         ]
 
@@ -128,18 +135,18 @@ def generate_dispatch_plan() -> dict:
 
             route = generate_route(
                 origin_zone="El Girón",
-                destination_zones=destination_zones
+                destination_zones=destination_zones,
             )
 
         log_info(
             "DISPATCH_PLAN_GENERATED",
-            f"Plan de despacho generado. Pedidos incluidos: {len(ready_orders)}"
+            f"Plan de despacho generado. Pedidos incluidos: {len(ready_orders)}",
         )
 
         return {
             "total_orders": len(ready_orders),
             "route": route,
-            "message": "Plan de despacho generado"
+            "message": "Plan de despacho generado",
         }
 
     except Exception as e:
