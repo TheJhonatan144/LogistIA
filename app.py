@@ -5,6 +5,7 @@ from typing import Any
 
 import requests
 import streamlit as st
+import pandas as pd
 
 
 API_BASE_URL_DEFAULT = os.getenv("LOGISTIAI_API_URL", "http://127.0.0.1:8000")
@@ -15,7 +16,60 @@ st.set_page_config(
     page_icon="🚚",
     layout="wide",
 )
+st.markdown("""
+<style>
+.main {
+    background-color: #0f1117;
+}
 
+.block-container {
+    padding-top: 2rem;
+}
+
+.kpi-card {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid #374151;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.kpi-title {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 8px;
+}
+
+.kpi-value {
+    font-size: 34px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.section-card {
+    background-color: #111827;
+    padding: 20px;
+    border-radius: 18px;
+    border: 1px solid #374151;
+    margin-top: 16px;
+}
+
+.status-entregado {
+    color: #22c55e;
+    font-weight: 700;
+}
+
+.status-recibido {
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.status-pendiente {
+    color: #facc15;
+    font-weight: 700;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ============================================================
 # Estado inicial
@@ -403,23 +457,61 @@ def render_summary(orders: list[dict[str, Any]], orders_error: str | None) -> No
     planned = count_by_fragments(counts, ["planificado", "planned"])
 
     col1, col2, col3, col4, col5 = st.columns(5)
-    col1.metric("Total pedidos", total_orders)
-    col2.metric("Recibidos", received)
-    col3.metric("Pendientes", pending)
-    col4.metric("Listos despacho", ready)
-    col5.metric("Planificados", planned)
 
-    st.subheader("Pedidos por estado")
+    with col1:
+       st.markdown(f"""
+       <div class="kpi-card">
+       <div class="kpi-title">📦 Total pedidos</div>
+        <div class="kpi-value">{total_orders}</div>
+       </div>
+       """, unsafe_allow_html=True)
+
+    with col2:
+       st.markdown(f"""
+       <div class="kpi-card">
+        <div class="kpi-title">📥 Recibidos</div>
+        <div class="kpi-value">{received}</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col3:
+        st.markdown(f"""
+        <div class="kpi-card">
+        <div class="kpi-title">⏳ Pendientes</div>
+        <div class="kpi-value">{pending}</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col4:
+         st.markdown(f"""
+         <div class="kpi-card">
+            <div class="kpi-title">📋 Listos</div>
+            <div class="kpi-value">{ready}</div>
+         </div>
+         """, unsafe_allow_html=True)
+
+    with col5:
+       st.markdown(f"""
+       <div class="kpi-card">
+        <div class="kpi-title">🚚 Planificados</div>
+        <div class="kpi-value">{planned}</div>
+       </div>
+       """, unsafe_allow_html=True)
+    st.subheader("📊 Pedidos por estado")
 
     if counts:
-        rows = [
-            {"estado": status, "cantidad": amount}
-            for status, amount in sorted(counts.items())
-        ]
-        st.dataframe(rows, use_container_width=True, hide_index=True)
+        df = pd.DataFrame(
+           [
+                 {"estado": status, "cantidad": amount}
+                 for status, amount in sorted(counts.items())
+            ]
+        )
+
+        st.bar_chart(
+             df.set_index("estado")
+        )
     else:
         st.info("Todavía no hay pedidos registrados.")
-
 
 def render_order_registration() -> None:
     st.header("Registrar pedido")
@@ -717,7 +809,6 @@ def main() -> None:
     tabs = st.tabs(
         [
             "Resumen general",
-            "Registrar pedido",
             "Lista de pedidos",
             "Estado de pedidos",
             "Plan de despacho",
@@ -726,23 +817,19 @@ def main() -> None:
     )
 
     with tabs[0]:
-        render_summary(orders, orders_error)
+       render_summary(orders, orders_error)
 
     with tabs[1]:
-        render_order_registration()
+       render_orders_list(orders, orders_error)
 
     with tabs[2]:
-        render_orders_list(orders, orders_error)
-
-    with tabs[3]:
         render_status_view(orders)
 
-    with tabs[4]:
+    with tabs[3]:
         render_dispatch_plan()
 
-    with tabs[5]:
+    with tabs[4]:
         render_route_view()
-
 
 if __name__ == "__main__":
     main()
