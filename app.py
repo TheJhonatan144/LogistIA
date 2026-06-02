@@ -12,64 +12,115 @@ API_BASE_URL_DEFAULT = os.getenv("LOGISTIAI_API_URL", "http://127.0.0.1:8000")
 
 
 st.set_page_config(
-    page_title="LogistiAI | Panel de despacho",
-    page_icon="🚚",
+    page_title="Panel de despacho",
+    page_icon="",
     layout="wide",
 )
-st.markdown("""
+def _load_background_css() -> None:
+    """
+    Carga fondo.png como base64 e lo inyecta en el CSS.
+    Si el archivo no existe, aplica un degradado oscuro como fallback.
+    """
+    import base64
+
+    fondo_path = "assets/fondo.png"
+
+    if os.path.exists(fondo_path):
+        with open(fondo_path, "rb") as f:
+            b64 = base64.b64encode(f.read()).decode()
+        bg_css = (
+            f"linear-gradient(rgba(5,10,25,0.88), rgba(5,10,25,0.92)),"
+            f"url('data:image/png;base64,{b64}')"
+        )
+    else:
+        bg_css = "linear-gradient(160deg, #020617 0%, #0f172a 50%, #082f49 100%)"
+
+    st.markdown(f"""
 <style>
-.main {
-    background-color: #0f1117;
-}
+.stApp {{
+    background: {bg_css};
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}}
 
-.block-container {
+.block-container {{
     padding-top: 2rem;
-}
+    padding-bottom: 2rem;
+}}
 
-.kpi-card {
-    background: linear-gradient(135deg, #1f2937, #111827);
+section[data-testid="stSidebar"] {{
+    background: linear-gradient(180deg, #020617, #0f172a);
+    border-right: 1px solid rgba(34, 211, 238, 0.25);
+}}
+
+h1, h2, h3 {{
+    color: #f8fafc;
+}}
+
+p, label, span {{
+    color: #e5e7eb;
+}}
+
+.kpi-card {{
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(8, 47, 73, 0.85));
     padding: 22px;
     border-radius: 18px;
-    border: 1px solid #374151;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
+    border: 1px solid rgba(34, 211, 238, 0.45);
+    box-shadow: 0 0 22px rgba(34, 211, 238, 0.16);
+}}
 
-.kpi-title {
+.kpi-title {{
     font-size: 14px;
-    color: #9ca3af;
+    color: #bae6fd;
     margin-bottom: 8px;
-}
+    font-weight: 600;
+}}
 
-.kpi-value {
+.kpi-value {{
     font-size: 34px;
     font-weight: 800;
-    color: #ffffff;
-}
+    color: #22d3ee;
+}}
 
-.section-card {
-    background-color: #111827;
-    padding: 20px;
+.section-card {{
+    background: rgba(15, 23, 42, 0.88);
+    padding: 22px;
     border-radius: 18px;
-    border: 1px solid #374151;
+    border: 1px solid rgba(34, 211, 238, 0.35);
     margin-top: 16px;
-}
+    box-shadow: 0 0 18px rgba(14, 165, 233, 0.12);
+}}
 
-.status-entregado {
-    color: #22c55e;
-    font-weight: 700;
-}
+.stDataFrame {{
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 14px;
+}}
 
-.status-recibido {
-    color: #38bdf8;
-    font-weight: 700;
-}
+div[data-testid="stMetric"] {{
+    background: rgba(15, 23, 42, 0.82);
+    border: 1px solid rgba(34, 211, 238, 0.28);
+    padding: 14px;
+    border-radius: 14px;
+}}
 
-.status-pendiente {
-    color: #facc15;
+.stButton > button {{
+    background: linear-gradient(90deg, #0891b2, #22d3ee);
+    color: #020617;
+    border: none;
+    border-radius: 12px;
     font-weight: 700;
-}
+}}
+
+.stButton > button:hover {{
+    background: linear-gradient(90deg, #22d3ee, #67e8f9);
+    color: #020617;
+}}
 </style>
 """, unsafe_allow_html=True)
+
+
+_load_background_css()
 
 # ============================================================
 # Estado inicial
@@ -407,7 +458,10 @@ def stops_to_rows(stops: list[Any]) -> list[dict[str, Any]]:
 
 def render_sidebar() -> None:
     with st.sidebar:
-        st.title("🚚 LogistiAI")
+        if os.path.exists("assets/logo.png"):
+            st.image("assets/logo.png", width=220)
+
+        st.markdown("")
         st.caption("Panel operativo de despacho")
 
         st.divider()
@@ -433,8 +487,7 @@ def render_sidebar() -> None:
 
         st.divider()
         st.caption(
-            "Este panel permite registrar pedidos, revisar estados "
-            "y generar planes de despacho desde el backend de LogistiAI."
+            ""
         )
 
 
@@ -583,211 +636,220 @@ def render_orders_list(orders: list[dict[str, Any]], orders_error: str | None) -
         ),
     )
 
-    st.json(orders[selected_index])
+    pedido = orders[selected_index]
+
+    st.markdown("### 📦 Información del pedido")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.metric("Cliente", pedido.get("cliente", "-"))
+        st.metric("Zona", pedido.get("zona", "-"))
+        st.metric("Estado", pedido.get("estado", "-"))
+
+    with col2:
+        st.metric("Urgencia", pedido.get("urgencia", "-"))
+        st.metric("Prioridad", pedido.get("score_prioridad", "-"))
+        st.metric("Dirección", pedido.get("direccion", "-"))
+
+    st.markdown("### 🛒 Productos")
+
+    productos = pedido.get("productos", [])
+
+    if productos:
+        productos_rows = []
+
+        for producto in productos:
+            productos_rows.append({
+                "Producto": producto.get("nombre"),
+                "Cantidad": producto.get("cantidad"),
+                "Unidad": producto.get("unidad"),
+            })
+
+        st.dataframe(
+            productos_rows,
+            use_container_width=True,
+            hide_index=True,
+        )
+    else:
+        st.info("No hay productos registrados.")
+
+    if pedido.get("observaciones"):
+        st.markdown("### 📝 Observaciones")
+        st.info(pedido.get("observaciones"))
+
+
+# ============================================================
+# Orden geográfico de zonas desde El Girón
+# ============================================================
+
+ROUTE_ORDER = {
+    "El Girón": 0,
+    "Centro Histórico": 1,
+    "La Marín": 2,
+    "Cumbayá": 3,
+    "Tumbaco": 4,
+    "Puembo": 5,
+    "San Rafael": 6,
+    "Sangolquí": 7,
+    "Conocoto": 8,
+    "Quitumbe": 9,
+    "Guamaní": 10,
+    "Calderón": 11,
+    "Carapungo": 12,
+}
+
+
+def get_ready_orders(orders: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        [o for o in orders if o.get("estado") == "listo_para_despacho"],
+        key=lambda o: (
+            ROUTE_ORDER.get(o.get("zona"), 999),
+            -(o.get("score_prioridad") or 0),
+        ),
+    )
 
 
 def render_status_view(orders: list[dict[str, Any]]) -> None:
     st.header("Estado de pedidos")
+    st.write("Monitoreo operativo de los pedidos registrados.")
 
-    st.write(
-        "Revisa el estado operativo de los pedidos registrados en el sistema."
-    )
-
-    data, error = api_request("GET", "/api/status", timeout=10)
-
-    if error:
-        st.warning(
-            "No se pudo consultar el estado general del backend. "
-            "Se muestran estados derivados del listado de pedidos."
-        )
-
-        counts = count_statuses(orders)
-
-        if not counts:
-            st.info("No hay información de estados disponible.")
-            return
-
-        rows = [
-            {"estado": status, "cantidad": amount}
-            for status, amount in sorted(counts.items())
-        ]
-        st.dataframe(rows, use_container_width=True, hide_index=True)
+    if not orders:
+        st.info("No hay pedidos registrados.")
         return
 
-    st.subheader("Estado general del sistema")
-    st.json(data)
+    rows = orders_to_rows(orders)
+    df = pd.DataFrame(rows)
 
-
-def render_plan_summary(plan: Any) -> None:
-    if not isinstance(plan, dict):
-        st.json(plan)
-        return
-
-    total = pick(
-        plan,
-        "total_orders",
-        "total_pedidos",
-        "pedidos_total",
-        "total",
-        "summary.total_orders",
-        default="No especificado",
-    )
-
-    route_method = pick(
-        plan,
-        "routing_method",
-        "route_method",
-        "metodo_ruteo",
-        "metodo",
-        "routing.method",
-        "route.method",
-        default="No especificado",
-    )
-
-    distance = pick(
-        plan,
-        "distance_km",
-        "distancia_km",
-        "distancia_estimada",
-        "distancia_estimada_km",
-        "route.distance_km",
-        "route.total_distance_km",
-        "routing.distance_km",
-        default="No especificada",
-    )
-
-    estimated_time = pick(
-        plan,
-        "time_min",
-        "tiempo_min",
-        "estimated_time_min",
-        "tiempo_estimado",
-        "tiempo_estimado_min",
-        "route.time_min",
-        "route.total_time_min",
-        "routing.time_min",
-        default="No especificado",
-    )
+    counts = count_statuses(orders)
 
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Pedidos incluidos", total)
-    col2.metric("Método de ruta", route_method)
-    col3.metric("Distancia estimada", distance)
-    col4.metric("Tiempo estimado", estimated_time)
+    col1.metric("📥 Recibidos", counts.get("recibido", 0))
+    col2.metric("🚚 Listos despacho", counts.get("listo_para_despacho", 0))
+    col3.metric("✅ Entregados", counts.get("entregado", 0))
+    col4.metric("⚠️ Pendientes", counts.get("pendiente_datos", 0))
 
-    stops = extract_stops(plan)
-
-    st.subheader("Paradas sugeridas")
-
-    if stops:
-        st.dataframe(stops_to_rows(stops), use_container_width=True, hide_index=True)
-    else:
-        st.info("El backend no devolvió paradas para este plan.")
-
-    explanation = pick(
-        plan,
-        "explicacion",
-        "explanation",
-        "detalle",
-        "summary.explanation",
-        default=None,
+    st.subheader("📋 Pedidos por estado")
+    st.dataframe(
+        df[["id", "cliente", "zona", "urgencia", "estado", "score_prioridad"]],
+        use_container_width=True,
+        hide_index=True,
     )
 
-    if explanation:
-        st.subheader("Explicación del plan")
-        st.info(str(explanation))
+    st.subheader("📊 Distribución por estado")
+    status_df = pd.DataFrame(
+        [{"estado": k, "cantidad": v} for k, v in counts.items()]
+    )
 
-    with st.expander("Ver respuesta completa del backend"):
-        st.json(plan)
+    if not status_df.empty:
+        st.bar_chart(status_df.set_index("estado"))
 
 
 def render_dispatch_plan() -> None:
     st.header("Plan de despacho")
-
     st.write(
-        "Genera un plan de despacho con los pedidos listos para entrega. "
-        "La priorización y el ruteo son calculados por el backend."
+        "Pedidos listos para despacho ordenados por cercanía geográfica desde El Girón "
+        "y prioridad dentro de cada zona."
     )
 
-    if st.button("Generar plan de despacho", type="primary", use_container_width=True):
-        data, error = api_request("POST", "/api/dispatch/plan", payload={}, timeout=30)
+    orders_payload, orders_error = api_request("GET", "/api/orders", timeout=10)
 
-        if error:
-            st.error(error)
-            return
+    if orders_error:
+        st.error(orders_error)
+        return
 
-        st.session_state["last_dispatch_plan"] = data
-        st.success("Plan de despacho generado correctamente.")
+    orders = extract_orders(orders_payload)
+    ready_orders = get_ready_orders(orders)
 
-    if st.session_state.get("last_dispatch_plan") is None:
-        st.info("Presiona el botón para solicitar el plan de despacho.")
-    else:
-        render_plan_summary(st.session_state["last_dispatch_plan"])
+    if not ready_orders:
+        st.info("No hay pedidos listos para despacho.")
+        return
+
+    col1, col2, col3 = st.columns(3)
+    col1.metric("🚚 Pedidos en ruta", len(ready_orders))
+    col2.metric("📍 Zonas", len(set(o.get("zona") for o in ready_orders)))
+    col3.metric("⭐ Mayor prioridad", max(o.get("score_prioridad") or 0 for o in ready_orders))
+
+    rows = []
+
+    for index, order in enumerate(ready_orders, start=1):
+        rows.append({
+            "parada": index,
+            "pedido": order.get("id"),
+            "cliente": order.get("cliente"),
+            "zona": order.get("zona"),
+            "direccion": order.get("direccion"),
+            "prioridad": order.get("score_prioridad"),
+            "estado": order.get("estado"),
+        })
+
+    st.subheader("🚚 Orden sugerido de despacho")
+    st.dataframe(rows, use_container_width=True, hide_index=True)
+
+    st.subheader("📍 Pedidos por zona en esta ruta")
+
+    zone_counts = {}
+
+    for order in ready_orders:
+        zona = order.get("zona") or "Sin zona"
+        zone_counts[zona] = zone_counts.get(zona, 0) + 1
+
+    zone_df = pd.DataFrame(
+        [
+            {"zona": zona, "cantidad": cantidad}
+            for zona, cantidad in sorted(
+                zone_counts.items(),
+                key=lambda item: item[1],
+                reverse=True,
+            )
+        ]
+    )
+
+    st.bar_chart(zone_df.set_index("zona"))
+
+    st.info(
+        ""
+    )
 
 
 def render_route_view() -> None:
     st.header("Ruta sugerida")
 
-    plan = st.session_state.get("last_dispatch_plan")
+    orders_payload, orders_error = api_request("GET", "/api/orders", timeout=10)
 
-    if plan is None:
-        st.info("Primero genera un plan de despacho.")
+    if orders_error:
+        st.error(orders_error)
         return
 
-    if not isinstance(plan, dict):
-        st.json(plan)
+    orders = extract_orders(orders_payload)
+    ready_orders = get_ready_orders(orders)
+
+    if not ready_orders:
+        st.warning("No hay pedidos listos para despacho.")
         return
 
-    route_method = pick(
-        plan,
-        "routing_method",
-        "route_method",
-        "metodo_ruteo",
-        "metodo",
-        "routing.method",
-        "route.method",
-        default="No especificado",
-    )
+    st.subheader("📍 Secuencia de entrega")
 
-    distance = pick(
-        plan,
-        "distance_km",
-        "distancia_km",
-        "distancia_estimada",
-        "route.distance_km",
-        "route.total_distance_km",
-        "routing.distance_km",
-        default="No especificada",
-    )
+    for index, order in enumerate(ready_orders, start=1):
+        maps_url = (
+            "https://www.google.com/maps/search/?api=1&query="
+            + requests.utils.quote(
+                f"{order.get('direccion') or ''} {order.get('zona') or ''}"
+            )
+        )
 
-    estimated_time = pick(
-        plan,
-        "time_min",
-        "tiempo_min",
-        "estimated_time_min",
-        "tiempo_estimado",
-        "route.time_min",
-        "route.total_time_min",
-        "routing.time_min",
-        default="No especificado",
-    )
-
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Método de ruteo", route_method)
-    col2.metric("Distancia estimada", distance)
-    col3.metric("Tiempo estimado", estimated_time)
-
-    stops = extract_stops(plan)
-
-    st.subheader("Orden sugerido de entrega")
-
-    if stops:
-        st.dataframe(stops_to_rows(stops), use_container_width=True, hide_index=True)
-    else:
-        st.warning("No se encontraron paradas en el plan actual.")
-
-    with st.expander("Ver datos completos de la ruta"):
-        st.json(plan)
+        st.markdown(f"""
+        <div class="section-card">
+            <h4>📍 Parada #{index}</h4>
+            <p><b>📦 Pedido:</b> #{order.get("id")}</p>
+            <p><b>👤 Cliente:</b> {order.get("cliente")}</p>
+            <p><b>📌 Zona:</b> {order.get("zona")}</p>
+            <p><b>🏠 Dirección:</b> {order.get("direccion")}</p>
+            <p><b>⭐ Prioridad:</b> {order.get("score_prioridad")}</p>
+            <p><b>📋 Estado:</b> {order.get("estado")}</p>
+            <a href="{maps_url}" target="_blank">📍 Abrir en Google Maps</a>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 # ============================================================
@@ -798,9 +860,9 @@ def main() -> None:
     init_state()
     render_sidebar()
 
-    st.title("Panel de despacho LogistiAI")
+    st.title("Panel de despacho LogistIA")
     st.caption(
-        "Gestión visual de pedidos, estados, planificación y ruta sugerida."
+        ""
     )
 
     orders_payload, orders_error = api_request("GET", "/api/orders", timeout=10)
