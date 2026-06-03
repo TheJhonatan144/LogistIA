@@ -195,6 +195,40 @@ def api_request(
 
 
 # ============================================================
+# Inventario desde SQLite
+# ============================================================
+
+def get_inventory_from_db() -> tuple[list[dict[str, Any]], str | None]:
+    import sqlite3
+
+    try:
+        conn = sqlite3.connect("data/logistiai.db")
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+
+        cursor.execute("""
+        SELECT
+            p.id,
+            p.nombre,
+            p.categoria,
+            i.stock,
+            i.stock_minimo
+        FROM inventario i
+        JOIN productos p
+            ON p.id = i.producto_id
+        ORDER BY p.nombre
+        """)
+
+        rows = [dict(row) for row in cursor.fetchall()]
+        conn.close()
+
+        return rows, None
+
+    except Exception as e:
+        return [], str(e)
+
+
+# ============================================================
 # Utilidades para leer respuestas variables del backend
 # ============================================================
 
@@ -624,7 +658,22 @@ def render_orders_list(orders: list[dict[str, Any]], orders_error: str | None) -
         return
 
     rows = orders_to_rows(orders)
-    st.dataframe(rows, use_container_width=True, hide_index=True)
+
+    df = pd.DataFrame(rows)
+
+    st.dataframe(
+        df[
+            [
+                "id",
+                "cliente",
+                "zona",
+                "estado",
+                "score_prioridad",
+            ]
+        ],
+        use_container_width=True,
+        hide_index=True,
+    )
 
     st.subheader("Detalle del pedido")
 
@@ -648,7 +697,6 @@ def render_orders_list(orders: list[dict[str, Any]], orders_error: str | None) -
         st.metric("Estado", pedido.get("estado", "-"))
 
     with col2:
-        st.metric("Urgencia", pedido.get("urgencia", "-"))
         st.metric("Prioridad", pedido.get("score_prioridad", "-"))
         st.metric("Dirección", pedido.get("direccion", "-"))
 
@@ -731,7 +779,7 @@ def render_status_view(orders: list[dict[str, Any]]) -> None:
 
     st.subheader("📋 Pedidos por estado")
     st.dataframe(
-        df[["id", "cliente", "zona", "urgencia", "estado", "score_prioridad"]],
+        df[["id", "cliente", "zona", "estado", "score_prioridad"]],
         use_container_width=True,
         hide_index=True,
     )
@@ -743,6 +791,81 @@ def render_status_view(orders: list[dict[str, Any]]) -> None:
 
     if not status_df.empty:
         st.bar_chart(status_df.set_index("estado"))
+
+
+def render_inventory_view() -> None:
+    st.header("Inventario")
+    st.write("Consulta el stock disponible y los productos con nivel bajo.")
+
+    inventory, error = get_inventory_from_db()
+
+    if error:
+        st.error(f"No se pudo cargar el inventario: {error}")
+        return
+
+    if not inventory:
+        st.info("No hay productos registrados en inventario.")
+        return
+
+    total_products = len(inventory)
+    low_stock = [
+        item for item in inventory
+        if (item.get("stock") or 0) <= (item.get("stock_minimo") or 0)
+    ]
+    available = total_products - len(low_stock)
+
+    col1, col2, col3 = st.columns(3)
+
+    col1.metric("📦 Productos", total_products)
+    col2.metric("✅ Disponibles", available)
+    col3.metric("⚠️ Stock bajo", len(low_stock))
+
+    rows = []
+
+    for item in inventory:
+        stock = item.get("stock") or 0
+        stock_minimo = item.get("stock_minimo") or 0
+
+        estado = "Stock bajo" if stock <= stock_minimo else "Disponible"
+
+        rows.append({
+            "producto": item.get("nombre"),
+            "categoria": item.get("categoria"),
+            "stock": stock,
+            "stock_minimo": stock_minimo,
+            "estado": estado,
+        })
+
+    st.subheader("📋 Inventario general")
+    st.dataframe(rows, use_container_width=True, hide_index=True)
+
+    st.subheader("📊 Stock por producto")
+
+    stock_df = pd.DataFrame(
+        [
+            {
+                "producto": item["producto"],
+                "stock": item["stock"],
+            }
+            for item in rows
+        ]
+    )
+
+    st.bar_chart(stock_df.set_index("producto"))
+
+    if low_stock:
+        st.subheader("⚠️ Productos con stock bajo")
+
+        low_rows = [
+            {
+                "producto": item.get("nombre"),
+                "stock": item.get("stock"),
+                "stock_minimo": item.get("stock_minimo"),
+            }
+            for item in low_stock
+        ]
+
+        st.dataframe(low_rows, use_container_width=True, hide_index=True)
 
 
 def render_dispatch_plan() -> None:
@@ -873,6 +996,7 @@ def main() -> None:
             "Resumen general",
             "Lista de pedidos",
             "Estado de pedidos",
+            "Inventario",
             "Plan de despacho",
             "Ruta sugerida",
         ]
@@ -888,9 +1012,12 @@ def main() -> None:
         render_status_view(orders)
 
     with tabs[3]:
-        render_dispatch_plan()
+        render_inventory_view()
 
     with tabs[4]:
+        render_dispatch_plan()
+
+    with tabs[5]:
         render_route_view()
 
 if __name__ == "__main__":
