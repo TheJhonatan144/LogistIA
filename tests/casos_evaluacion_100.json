@@ -1,0 +1,1072 @@
+[
+  {
+    "id": 1,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 2,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 3,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Andrés Castillo de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 4,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Diego Morales, sector Cumbayá, requiere 3 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 5,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Carlos Méndez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 6,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 7,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente María López, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 8,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Carlos Méndez en Cumbayá solicita 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 9,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Ana Torres de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 10,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Sofía Ramírez de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 11,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Juan Pérez en Cumbayá, enviar 3 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 12,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Andrés Castillo, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 13,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Diego Morales en Cumbayá solicita 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 14,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Carlos Méndez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 15,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "María López de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 16,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 17,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Andrés Castillo de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 18,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Sofía Ramírez, sector Cumbayá, requiere 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 19,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Lucía Gómez de Cumbayá necesita 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 20,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Juan Pérez en Cumbayá solicita 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 21,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Sofía Ramírez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 22,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente María López en Cumbayá solicita 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 23,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Diego Morales de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 24,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Andrés Castillo en Cumbayá solicita 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 25,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "María López de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 26,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 27,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Sofía Ramírez de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 28,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 29,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Ana Torres de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 30,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Andrés Castillo en Cumbayá, enviar 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 31,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "María López de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 32,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Andrés Castillo de Cumbayá: 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 33,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Ana Torres, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 34,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Diego Morales de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 35,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 36,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Sofía Ramírez de Cumbayá: 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 37,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Juan Pérez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 38,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente María López de Cumbayá: 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 39,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 40,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 41,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Andrés Castillo de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 42,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Andrés Castillo, sector Cumbayá, requiere 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 43,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Diego Morales en Cumbayá solicita 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 44,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Juan Pérez en Cumbayá solicita 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 45,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 46,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Carlos Méndez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 47,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Diego Morales de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 48,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Lucía Gómez en Cumbayá solicita 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 49,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Juan Pérez de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 50,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Ana Torres de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 51,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Diego Morales en Cumbayá solicita 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 52,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 53,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Ana Torres de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 54,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Pedro Sánchez de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 55,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Pedro Sánchez en Cumbayá, enviar 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 56,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Ana Torres de Cumbayá: 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 57,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente María López de Cumbayá: 3 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 58,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Carlos Méndez de Cumbayá: 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 59,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Andrés Castillo en Cumbayá, enviar 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 60,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Andrés Castillo de Cumbayá necesita 2 teclados Logitech y 1 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 61,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Ana Torres de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 62,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Sofía Ramírez de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 63,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Sofía Ramírez, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 64,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Lucía Gómez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 65,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 66,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Ana Torres en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 67,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Lucía Gómez de Cumbayá necesita 3 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 68,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Sofía Ramírez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 69,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 70,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedro Sánchez de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 71,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Sofía Ramírez de Cumbayá: 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 72,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Diego Morales en Cumbayá, enviar 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 73,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Andrés Castillo en Cumbayá, enviar 2 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 74,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 75,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Ana Torres de Cumbayá necesita 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 76,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 77,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente Sofía Ramírez en Cumbayá, enviar 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 78,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Pedido para el cliente Valeria Ruiz de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 79,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente María López de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 80,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Para el cliente María López en Cumbayá, enviar 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 81,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 82,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 83,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Lucía Gómez en Cumbayá solicita 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 84,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 85,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo generado automáticamente.",
+    "entrada": "El cliente Pedro Sánchez en Cumbayá solicita 3 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  },
+  {
+    "id": 86,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 3 teclados Logitech y 1 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 87,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Se necesitan 2 teclados Logitech y 1 mouse Logitech.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 88,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 3 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 89,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 3 teclados Logitech y 1 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 90,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 2 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 91,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 1 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 92,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 3 teclados Logitech y 3 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 93,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Pedido urgente de 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 94,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 3 teclados Logitech y 3 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 95,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Pedido urgente de 3 teclados Logitech y 3 mouse Logitech.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 96,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Necesito 3 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 97,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Pedido urgente de 2 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 98,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Se necesitan 3 teclados Logitech y 2 mouse Logitech.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 99,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Necesito 2 teclados Logitech y 3 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 100,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido incompleto generado automáticamente.",
+    "entrada": "Enviar 2 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "debe_detectar_error": true
+    }
+  }
+]
