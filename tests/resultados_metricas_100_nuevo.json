@@ -1,0 +1,3463 @@
+{
+  "archivo_casos": "tests\\casos_evaluacion_100.json",
+  "resumen": {
+    "total_casos": 100,
+    "casos_exitosos": 85,
+    "casos_fallidos": 15,
+    "tasa_exito_porcentaje": 85.0,
+    "latencia_promedio_segundos": 18.08
+  },
+  "resultados": [
+    {
+      "id": 1,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.48,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Lucía Gómez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 51,
+        "errores": null
+      }
+    },
+    {
+      "id": 2,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.25,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Juan Pérez, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 68,
+        "id": 52,
+        "errores": null
+      }
+    },
+    {
+      "id": 3,
+      "tipo": "pedido_completo",
+      "entrada": "Andrés Castillo de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 16.62,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Andrés Castillo de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 53,
+        "errores": null
+      }
+    },
+    {
+      "id": 4,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Diego Morales, sector Cumbayá, requiere 3 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 17.07,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Diego Morales",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Diego Morales, sector Cumbayá, requiere 3 teclados Logitech y 3 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 73,
+        "id": 54,
+        "errores": null
+      }
+    },
+    {
+      "id": 5,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Carlos Méndez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 21.08,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Carlos Méndez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Carlos Méndez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 55,
+        "errores": null
+      }
+    },
+    {
+      "id": 6,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 19.41,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Pedro Sánchez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Pedro Sánchez, sector Cumbayá, requiere 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 68,
+        "id": 56,
+        "errores": null
+      }
+    },
+    {
+      "id": 7,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente María López, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 25.84,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "María López",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente María López, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 77,
+        "id": 57,
+        "errores": null
+      }
+    },
+    {
+      "id": 8,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Carlos Méndez en Cumbayá solicita 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 17.84,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Carlos Méndez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Carlos Méndez en Cumbayá solicita 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 58,
+        "errores": null
+      }
+    },
+    {
+      "id": 9,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Ana Torres de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 25.72,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Ana Torres",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Ana Torres de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+        "estado": "recibido",
+        "score_prioridad": 77,
+        "id": 59,
+        "errores": null
+      }
+    },
+    {
+      "id": 10,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Sofía Ramírez de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 23.62,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Sofía Ramírez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Sofía Ramírez de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech urgente.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 60,
+        "errores": null
+      }
+    },
+    {
+      "id": 11,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Juan Pérez en Cumbayá, enviar 3 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 22.21,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Juan Pérez en Cumbayá, enviar 3 teclados Logitech y 3 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 77,
+        "id": 61,
+        "errores": null
+      }
+    },
+    {
+      "id": 12,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Andrés Castillo, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.68,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Andrés Castillo, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 68,
+        "id": 62,
+        "errores": null
+      }
+    },
+    {
+      "id": 13,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Diego Morales en Cumbayá solicita 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 22.18,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Diego Morales",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Diego Morales en Cumbayá solicita 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 63,
+        "errores": null
+      }
+    },
+    {
+      "id": 14,
+      "tipo": "pedido_completo",
+      "entrada": "Carlos Méndez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 15.03,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Carlos Méndez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Carlos Méndez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 64,
+        "errores": null
+      }
+    },
+    {
+      "id": 15,
+      "tipo": "pedido_completo",
+      "entrada": "María López de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 17.93,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Maria Lopez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "María López de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 65,
+        "errores": null
+      }
+    },
+    {
+      "id": 16,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 25.63,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Pedro Sánchez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 48,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 2."
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Andrés Castillo de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.04,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Andrés Castillo de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Sofía Ramírez, sector Cumbayá, requiere 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.04,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Sofía Ramírez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Sofía Ramírez, sector Cumbayá, requiere 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 68,
+        "id": 66,
+        "errores": null
+      }
+    },
+    {
+      "id": 19,
+      "tipo": "pedido_completo",
+      "entrada": "Lucía Gómez de Cumbayá necesita 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.04,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Lucía Gómez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Lucía Gómez de Cumbayá necesita 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 1."
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Juan Pérez en Cumbayá solicita 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 16.13,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Juan Pérez en Cumbayá solicita 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 1."
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Sofía Ramírez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.67,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Sofía Ramírez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Sofía Ramírez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 48,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 1."
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente María López en Cumbayá solicita 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.39,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "María López",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente María López en Cumbayá solicita 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "recibido",
+        "score_prioridad": 72,
+        "id": 67,
+        "errores": null
+      }
+    },
+    {
+      "id": 23,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Diego Morales de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.05,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Diego Morales de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Andrés Castillo en Cumbayá solicita 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 15.7,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Andrés Castillo en Cumbayá solicita 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "tipo": "pedido_completo",
+      "entrada": "María López de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 20.75,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "María López",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "María López de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 27,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 16.99,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Lucía Gómez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Sofía Ramírez de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 17.53,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Sofía Ramírez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Sofía Ramírez de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech urgente",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.45,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Valeria Ruiz",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 23,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Ana Torres de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 21.26,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Ana Torres",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Ana Torres de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Andrés Castillo en Cumbayá, enviar 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.84,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Andrés Castillo en Cumbayá, enviar 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "tipo": "pedido_completo",
+      "entrada": "María López de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.42,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "María López",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "María López de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Andrés Castillo de Cumbayá: 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.04,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Andrés Castillo de Cumbayá: 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Ana Torres, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.02,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Ana Torres",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Ana Torres, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "tipo": "pedido_completo",
+      "entrada": "Diego Morales de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.06,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Diego Morales",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Diego Morales de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.94,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Juan Pérez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 48,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Sofía Ramírez de Cumbayá: 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.05,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Sofía Ramírez de Cumbayá: 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "tipo": "pedido_completo",
+      "entrada": "Juan Pérez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 20.9,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Juan Pérez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente María López de Cumbayá: 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.05,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente María López de Cumbayá: 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "tipo": "pedido_completo",
+      "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 16.54,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Valeria Ruiz",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.93,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Valeria Ruiz",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "tipo": "pedido_completo",
+      "entrada": "Andrés Castillo de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 26.85,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Andrés Castillo de Cumbayá necesita 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Andrés Castillo, sector Cumbayá, requiere 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 29.6,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Andrés Castillo, sector Cumbayá, requiere 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 43,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Diego Morales en Cumbayá solicita 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 20.61,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Diego Morales",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Diego Morales en Cumbayá solicita 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 37,
+        "id": 68,
+        "errores": [
+          "Falta cantidad del producto",
+          "Falta cantidad del producto"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Juan Pérez en Cumbayá solicita 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 17.45,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Juan Pérez en Cumbayía solicita 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 27.09,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Pedro Sánchez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Carlos Méndez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 25.41,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Carlos Méndez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Carlos Méndez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 48,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Diego Morales de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 26.21,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Diego Morales",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Diego Morales de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Lucía Gómez en Cumbayá solicita 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 27.79,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Lucía Gómez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Lucía Gómez en Cumbayá solicita 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Juan Pérez de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.05,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Juan Pérez de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "tipo": "pedido_completo",
+      "entrada": "Ana Torres de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 17.38,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Ana Torres",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Ana Torres de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Diego Morales en Cumbayá solicita 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 26.46,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Diego Morales",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Diego Morales en Cumbayá solicita 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 26.3,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Lucía Gómez en Cumbayá, enviar 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 27,
+        "id": 69,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Ana Torres de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.08,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Ana Torres de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Pedro Sánchez de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 18.45,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Pedro Sánchez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Pedro Sánchez de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Pedro Sánchez en Cumbayá, enviar 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.46,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Pedro Sánchez en Cumbayá, enviar 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 47,
+        "id": 70,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Ana Torres de Cumbayá: 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.05,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Ana Torres de Cumbayá: 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente María López de Cumbayá: 3 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.05,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente María López de Cumbayá: 3 teclados Logitech y 3 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Carlos Méndez de Cumbayá: 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.04,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Carlos Méndez de Cumbayá: 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Andrés Castillo en Cumbayá, enviar 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.87,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Andrés Castillo en Cumbayá, enviar 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Andrés Castillo de Cumbayá necesita 2 teclados Logitech y 1 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 25.86,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Andrés Castillo de Cumbayá necesita 2 teclados Logitech y 1 mouse Logitech urgente.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Ana Torres de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 23.6,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Ana Torres",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Ana Torres de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech urgente.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 62,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Sofía Ramírez de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.04,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Sofía Ramírez de Cumbayá: 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 63,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Sofía Ramírez, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 25.34,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Sofía Ramírez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Sofía Ramírez, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 43,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 64,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Lucía Gómez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 18.08,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Lucía Gómez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Lucía Gómez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 65,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 22.69,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Pedro Sánchez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Pedro Sánchez, sector Cumbayá, requiere 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 33,
+        "id": 71,
+        "errores": [
+          "Falta cantidad del producto",
+          "Falta cantidad del producto"
+        ]
+      }
+    },
+    {
+      "id": 66,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Ana Torres en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 18.61,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Ana Torres",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Ana Torres en Cumbayá, enviar 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 67,
+      "tipo": "pedido_completo",
+      "entrada": "Lucía Gómez de Cumbayá necesita 3 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 17.76,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Lucía Gómez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Lucía Gómez de Cumbayá necesita 3 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 68,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Sofía Ramírez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 23.89,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Sofía Ramírez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Sofía Ramírez de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 69,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 21.9,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Juan Pérez, sector Cumbayá, requiere 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 48,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 70,
+      "tipo": "pedido_completo",
+      "entrada": "Pedro Sánchez de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 21.25,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Pedro Sánchez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedro Sánchez de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 27,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 71,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Sofía Ramírez de Cumbayá: 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.03,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Sofía Ramírez de Cumbayá: 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 72,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Diego Morales en Cumbayá, enviar 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 16.61,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Diego Morales",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Diego Morales en Cumbayá, enviar 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 73,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Andrés Castillo en Cumbayá, enviar 2 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 24.66,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Andrés Castillo",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Andrés Castillo en Cumbayá, enviar 2 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 74,
+      "tipo": "pedido_completo",
+      "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 25.59,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Valeria Ruiz",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 75,
+      "tipo": "pedido_completo",
+      "entrada": "Ana Torres de Cumbayá necesita 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 25.64,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Ana Torres",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Ana Torres de Cumbayá necesita 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "tipo": "pedido_completo",
+      "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 16.6,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Valeria Ruiz",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 77,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente Sofía Ramírez en Cumbayá, enviar 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 17.77,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Sofía Ramírez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente Sofía Ramírez en Cumbayá, enviar 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 78,
+      "tipo": "pedido_completo",
+      "entrada": "Pedido para el cliente Valeria Ruiz de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.03,
+      "exitoso": false,
+      "observaciones": [
+        "No se extrajo cliente",
+        "No se extrajo zona",
+        "Productos insuficientes. Esperado mínimo: 1, obtenido: 0"
+      ],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido para el cliente Valeria Ruiz de Cumbayá: 1 teclados Logitech y 2 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 79,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente María López de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 18.17,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "María López",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente María López de Cumbayá necesita 2 teclados Logitech y 3 mouse Logitech urgente",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 80,
+      "tipo": "pedido_completo",
+      "entrada": "Para el cliente María López en Cumbayá, enviar 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 16.15,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "María López",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Para el cliente María López en Cumbayá, enviar 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 2. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 81,
+      "tipo": "pedido_completo",
+      "entrada": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 19.25,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Valeria Ruiz",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados_Logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Valeria Ruiz de Cumbayá necesita 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 37,
+        "id": 72,
+        "errores": [
+          "Falta cantidad del producto",
+          "Falta cantidad del producto"
+        ]
+      }
+    },
+    {
+      "id": 82,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.79,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Valeria Ruiz",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Valeria Ruiz, sector Cumbayá, requiere 1 teclados Logitech y 3 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Lucía Gómez en Cumbayá solicita 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.01,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Lucía Gómez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Lucía Gómez en Cumbayá solicita 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 52,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Juan Pérez, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.2,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Juan Pérez",
+        "telefono": null,
+        "zona": "sector Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Juan Pérez, sector Cumbayá, requiere 1 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 43,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 1. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 85,
+      "tipo": "pedido_completo",
+      "entrada": "El cliente Pedro Sánchez en Cumbayá solicita 3 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 23.38,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": "Pedro Sánchez",
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "El cliente Pedro Sánchez en Cumbayá solicita 3 teclados Logitech y 1 mouse Logitech.",
+        "estado": "rechazado_stock",
+        "score_prioridad": 47,
+        "id": null,
+        "errores": [
+          "Stock insuficiente para Teclado Logitech. Solicitado: 3. Disponible: 0."
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 3 teclados Logitech y 1 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 21.47,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 3 teclados Logitech y 1 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 47,
+        "id": 73,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "tipo": "pedido_incompleto",
+      "entrada": "Se necesitan 2 teclados Logitech y 1 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 19.15,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Se necesitan 2 teclados Logitech y 1 mouse Logitech.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 47,
+        "id": 74,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 88,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 3 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 18.12,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_logitech",
+            "cantidad": null,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 3 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 37,
+        "id": 75,
+        "errores": [
+          "Falta cliente",
+          "Falta cantidad del producto",
+          "Falta cantidad del producto"
+        ]
+      }
+    },
+    {
+      "id": 89,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 3 teclados Logitech y 1 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 13.54,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 3 teclados Logitech y 1 mouse Logitech urgente",
+        "estado": "pendiente_datos",
+        "score_prioridad": 47,
+        "id": 76,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 90,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 2 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 21.37,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 2 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 47,
+        "id": 77,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 1 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 14.49,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados Logitech",
+            "cantidad": 1.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 1 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 47,
+        "id": 78,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 92,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 3 teclados Logitech y 3 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 21.24,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 3 teclados Logitech y 3 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 52,
+        "id": 79,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 93,
+      "tipo": "pedido_incompleto",
+      "entrada": "Pedido urgente de 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.03,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido urgente de 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 94,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 3 teclados Logitech y 3 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 19.61,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 3 teclados Logitech y 3 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 52,
+        "id": 80,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 95,
+      "tipo": "pedido_incompleto",
+      "entrada": "Pedido urgente de 3 teclados Logitech y 3 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.03,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido urgente de 3 teclados Logitech y 3 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 96,
+      "tipo": "pedido_incompleto",
+      "entrada": "Necesito 3 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 14.92,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclados_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Necesito 3 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 52,
+        "id": 81,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 97,
+      "tipo": "pedido_incompleto",
+      "entrada": "Pedido urgente de 2 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 0.05,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": null,
+        "direccion": null,
+        "productos": [],
+        "urgencia": "media",
+        "hora_limite": null,
+        "observaciones": "Pedido urgente de 2 teclados Logitech y 2 mouse Logitech.",
+        "estado": "mensaje_no_pedido",
+        "score_prioridad": 0,
+        "id": null,
+        "errores": [
+          "No se detectó un pedido válido. Indique producto y cantidad."
+        ]
+      }
+    },
+    {
+      "id": 98,
+      "tipo": "pedido_incompleto",
+      "entrada": "Se necesitan 3 teclados Logitech y 2 mouse Logitech.",
+      "status_code": 200,
+      "tiempo_segundos": 19.91,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Se necesitan 3 teclados Logitech y 2 mouse Logitech.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 52,
+        "id": 82,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 99,
+      "tipo": "pedido_incompleto",
+      "entrada": "Necesito 2 teclados Logitech y 3 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 16.41,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 3.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Necesito 2 teclados Logitech y 3 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 52,
+        "id": 83,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    },
+    {
+      "id": 100,
+      "tipo": "pedido_incompleto",
+      "entrada": "Enviar 2 teclados Logitech y 2 mouse Logitech urgente.",
+      "status_code": 200,
+      "tiempo_segundos": 25.16,
+      "exitoso": true,
+      "observaciones": [],
+      "respuesta": {
+        "cliente": null,
+        "telefono": null,
+        "zona": "Cumbayá",
+        "direccion": null,
+        "productos": [
+          {
+            "nombre": "teclado_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          },
+          {
+            "nombre": "mouse_Logitech",
+            "cantidad": 2.0,
+            "unidad": "unidades"
+          }
+        ],
+        "urgencia": "alta",
+        "hora_limite": null,
+        "observaciones": "Enviar 2 teclados Logitech y 2 mouse Logitech urgente.",
+        "estado": "pendiente_datos",
+        "score_prioridad": 47,
+        "id": 84,
+        "errores": [
+          "Falta cliente"
+        ]
+      }
+    }
+  ]
+}
