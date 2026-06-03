@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "tipo": "pedido_completo",
+    "descripcion": "Pedido completo con cliente, zona, productos y urgencia.",
+    "entrada": "El cliente Juan Pérez de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "debe_ser_exitoso": true,
+      "estado_esperado": "recibido",
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 2,
+      "urgencia_esperada": "alta"
+    }
+  },
+  {
+    "id": 2,
+    "tipo": "pedido_incompleto",
+    "descripcion": "Pedido sin cliente; el sistema debe detectar dato faltante.",
+    "entrada": "Necesito 3 teclados Logitech y 2 mouse Logitech urgente.",
+    "esperado": {
+      "debe_ser_exitoso": true,
+      "estado_esperado": "pendiente_datos",
+      "debe_detectar_error": true,
+      "error_esperado": "Falta cliente"
+    }
+  },
+  {
+    "id": 3,
+    "tipo": "producto_inexistente",
+    "descripcion": "Pedido con producto no registrado en inventario.",
+    "entrada": "El cliente Carlos de Cumbayá necesita 2 drones industriales urgente.",
+    "esperado": {
+      "debe_ser_exitoso": true,
+      "debe_detectar_error": true,
+      "error_contiene": "Producto no registrado"
+    }
+  },
+  {
+    "id": 4,
+    "tipo": "pedido_sin_zona",
+    "descripcion": "Pedido sin zona; el sistema debe detectar dato faltante.",
+    "entrada": "El cliente Ana necesita 1 teclado Logitech urgente.",
+    "esperado": {
+      "debe_ser_exitoso": true,
+      "estado_esperado": "pendiente_datos",
+      "debe_detectar_error": true
+    }
+  },
+  {
+    "id": 5,
+    "tipo": "pedido_normal",
+    "descripcion": "Pedido completo sin urgencia alta explícita.",
+    "entrada": "El cliente Pedro de Cumbayá necesita 1 mouse Logitech.",
+    "esperado": {
+      "debe_ser_exitoso": true,
+      "cliente_requerido": true,
+      "zona_requerida": true,
+      "productos_minimos": 1
+    }
+  }
+]
