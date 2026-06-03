@@ -1,110 +1,77 @@
 URGENCY_SCORE = {
-    "alta": 100,
-    "media": 60,
-    "baja": 30
+    "alta": 50,
+    "media": 30,
+    "baja": 10,
 }
 
 CLIENT_TYPE_SCORE = {
-    "vip": 100,
-    "normal": 50
+    "vip": 20,
+    "normal": 0,
 }
 
-DEFAULT_ZONE_SCORE = 70
-DEFAULT_ORDER_VALUE_SCORE = 50
+ZONE_SCORE = {
+    # Cerca / frecuente desde El Girón
+    "el girón": 15,
+    "centro histórico": 15,
+    "la marín": 15,
+    "cumbayá": 12,
+    "tumbaco": 12,
+    "puembo": 12,
+
+    # Media
+    "san rafael": 10,
+    "sangolquí": 10,
+    "conocoto": 10,
+
+    # Lejana
+    "calderón": 5,
+    "carapungo": 5,
+    "quitumbe": 5,
+    "guamaní": 5,
+}
+
+VIP_CLIENTS = {
+    "Fernanda",
+}
 
 
 def calculate_priority(order: dict) -> int:
-    """
-    Calcula un score de prioridad entre 0 y 100.
-
-    Criterios usados:
-    - urgencia del pedido;
-    - tipo de cliente;
-    - cercanía/zona;
-    - valor operativo aproximado;
-    - restricción horaria;
-    - posibilidad de agrupación por zona;
-    - penalización por errores.
-    """
-
-    urgencia = (order.get("urgencia") or "baja").lower()
-    tipo_cliente = (order.get("tipo_cliente") or "normal").lower()
+    urgencia = (order.get("urgencia") or "media").lower()
+    cliente = (order.get("cliente") or "").strip()
+    tipo_cliente = _get_client_type(cliente)
 
     urgency_score = URGENCY_SCORE.get(urgencia, 30)
-    client_score = CLIENT_TYPE_SCORE.get(tipo_cliente, 50)
-
+    client_score = CLIENT_TYPE_SCORE.get(tipo_cliente, 0)
     zone_score = _calculate_zone_score(order)
     order_value_score = _calculate_order_value_score(order)
 
     score = (
-        urgency_score * 0.40 +
-        client_score * 0.25 +
-        zone_score * 0.20 +
-        order_value_score * 0.15
+        urgency_score +
+        client_score +
+        zone_score +
+        order_value_score
     )
 
     if order.get("hora_limite"):
-        score += 10
-
-    observaciones = (order.get("observaciones") or "").lower()
-
-    if "urgente" in observaciones or "prioridad" in observaciones:
         score += 5
 
     if order.get("errores"):
-        score -= 30
+        score -= 25
 
-    score = max(0, min(100, round(score)))
+    return max(0, min(100, round(score)))
 
-    return score
+
+def _get_client_type(cliente: str) -> str:
+    return "vip" if cliente in VIP_CLIENTS else "normal"
 
 
 def _calculate_zone_score(order: dict) -> int:
-    """
-    Estima cercanía o conveniencia de zona para el MVP.
-    No calcula rutas reales.
-    """
-
-    zona = (order.get("zona") or "").lower()
-
-    zonas_cercanas = [
-        "el girón",
-        "la carolina",
-        "centro",
-        "centro histórico",
-        "la magdalena"
-    ]
-
-    zonas_medias = [
-        "norte",
-        "sur",
-        "el condado",
-        "calderón",
-        "carapungo"
-    ]
-
-    if zona in zonas_cercanas:
-        return 100
-
-    if zona in zonas_medias:
-        return 70
-
-    if zona:
-        return 50
-
-    return DEFAULT_ZONE_SCORE
+    zona = (order.get("zona") or "").lower().strip()
+    return ZONE_SCORE.get(zona, 8 if zona else 0)
 
 
 def _calculate_order_value_score(order: dict) -> int:
-    """
-    Estima valor operativo usando cantidad de productos.
-    No usa precios ni inventario real.
-    """
-
     productos = order.get("productos") or []
-
-    if not productos:
-        return DEFAULT_ORDER_VALUE_SCORE
 
     total_cantidad = 0
 
@@ -117,9 +84,12 @@ def _calculate_order_value_score(order: dict) -> int:
             continue
 
     if total_cantidad >= 5:
-        return 100
+        return 15
 
     if total_cantidad >= 2:
-        return 70
+        return 10
 
-    return 50
+    if total_cantidad >= 1:
+        return 5
+
+    return 0
