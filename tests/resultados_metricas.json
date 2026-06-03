@@ -2,10 +2,10 @@
   "archivo_casos": "tests\\casos_evaluacion.json",
   "resumen": {
     "total_casos": 5,
-    "casos_exitosos": 3,
-    "casos_fallidos": 2,
-    "tasa_exito_porcentaje": 60.0,
-    "latencia_promedio_segundos": 4.08
+    "casos_exitosos": 4,
+    "casos_fallidos": 1,
+    "tasa_exito_porcentaje": 80.0,
+    "latencia_promedio_segundos": 18.95
   },
   "resultados": [
     {
@@ -13,7 +13,7 @@
       "tipo": "pedido_completo",
       "entrada": "El cliente Juan Pérez de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech urgente.",
       "status_code": 200,
-      "tiempo_segundos": 6.78,
+      "tiempo_segundos": 38.25,
       "exitoso": true,
       "observaciones": [],
       "respuesta": {
@@ -37,8 +37,8 @@
         "hora_limite": null,
         "observaciones": "El cliente Juan Pérez de Cumbayá necesita 3 teclados Logitech y 2 mouse Logitech urgente.",
         "estado": "recibido",
-        "score_prioridad": 82,
-        "id": 39,
+        "score_prioridad": 77,
+        "id": 46,
         "errores": null
       }
     },
@@ -47,7 +47,7 @@
       "tipo": "pedido_incompleto",
       "entrada": "Necesito 3 teclados Logitech y 2 mouse Logitech urgente.",
       "status_code": 200,
-      "tiempo_segundos": 3.16,
+      "tiempo_segundos": 14.64,
       "exitoso": true,
       "observaciones": [],
       "respuesta": {
@@ -72,7 +72,7 @@
         "observaciones": "Necesito 3 teclados Logitech y 2 mouse Logitech urgente.",
         "estado": "pendiente_datos",
         "score_prioridad": 52,
-        "id": 40,
+        "id": 47,
         "errores": [
           "Falta cliente"
         ]
@@ -83,7 +83,7 @@
       "tipo": "producto_inexistente",
       "entrada": "El cliente Carlos de Cumbayá necesita 2 drones industriales urgente.",
       "status_code": 200,
-      "tiempo_segundos": 3.65,
+      "tiempo_segundos": 16.08,
       "exitoso": false,
       "observaciones": [
         "No se detectó un error que contenga: Producto no registrado"
@@ -95,12 +95,7 @@
         "direccion": null,
         "productos": [
           {
-            "nombre": "drone industrial",
-            "cantidad": null,
-            "unidad": "unidades"
-          },
-          {
-            "nombre": "drone industrial",
+            "nombre": "Drones Industriales",
             "cantidad": null,
             "unidad": "unidades"
           }
@@ -109,10 +104,9 @@
         "hora_limite": null,
         "observaciones": "El cliente Carlos de Cumbayá necesita 2 drones industriales urgente",
         "estado": "pendiente_datos",
-        "score_prioridad": 45,
-        "id": 41,
+        "score_prioridad": 37,
+        "id": 48,
         "errores": [
-          "Falta cantidad del producto",
           "Falta cantidad del producto"
         ]
       }
@@ -122,14 +116,11 @@
       "tipo": "pedido_sin_zona",
       "entrada": "El cliente Ana necesita 1 teclado Logitech urgente.",
       "status_code": 200,
-      "tiempo_segundos": 3.17,
-      "exitoso": false,
-      "observaciones": [
-        "Estado diferente. Esperado: pendiente_datos, obtenido: recibido",
-        "Se esperaba algún error de validación, pero errores vino vacío"
-      ],
+      "tiempo_segundos": 10.45,
+      "exitoso": true,
+      "observaciones": [],
       "respuesta": {
-        "cliente": "Ana",
+        "cliente": null,
         "telefono": null,
         "zona": "Cumbayá",
         "direccion": null,
@@ -140,13 +131,15 @@
             "unidad": "unidades"
           }
         ],
-        "urgencia": "urgente",
+        "urgencia": "alta",
         "hora_limite": null,
         "observaciones": "El cliente Ana necesita 1 teclado Logitech urgente",
-        "estado": "recibido",
-        "score_prioridad": 47,
-        "id": 42,
-        "errores": null
+        "estado": "pendiente_datos",
+        "score_prioridad": 42,
+        "id": 49,
+        "errores": [
+          "Falta cliente"
+        ]
       }
     },
     {
@@ -154,7 +147,7 @@
       "tipo": "pedido_normal",
       "entrada": "El cliente Pedro de Cumbayá necesita 1 mouse Logitech.",
       "status_code": 200,
-      "tiempo_segundos": 3.62,
+      "tiempo_segundos": 15.33,
       "exitoso": true,
       "observaciones": [],
       "respuesta": {
@@ -164,7 +157,7 @@
         "direccion": null,
         "productos": [
           {
-            "nombre": "mouse Logitech",
+            "nombre": "Mouse Logitech",
             "cantidad": 1.0,
             "unidad": "unidades"
           }
@@ -173,8 +166,8 @@
         "hora_limite": null,
         "observaciones": "El cliente Pedro de Cumbayá necesita 1 mouse Logitech.",
         "estado": "recibido",
-        "score_prioridad": 54,
-        "id": 43,
+        "score_prioridad": 47,
+        "id": 50,
         "errores": null
       }
     }

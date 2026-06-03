@@ -1,3 +1,6 @@
+import re
+import unicodedata
+
 from app.core.settings import (
     USE_MOCK_DB,
     USE_MOCK_LLM,
@@ -36,12 +39,20 @@ if USE_MOCK_ROUTING:
 else:
     from app.services.routing_service import generate_route
 
+def normalize_text(text: str) -> str:
+    text = text.lower().strip()
+    text = unicodedata.normalize("NFD", text)
+    return "".join(c for c in text if unicodedata.category(c) != "Mn")
+
+
 def looks_like_order(message: str) -> bool:
-    text = message.lower().strip()
+    text = normalize_text(message)
 
     order_words = [
         "necesito",
         "necesita",
+        "necesite",
+        "necesitar",
         "quiero",
         "quiere",
         "pido",
@@ -51,11 +62,32 @@ def looks_like_order(message: str) -> bool:
         "requiero",
         "requiere",
         "enviar",
+        "enviame",
+        "eviame",
+        "mandame",
         "entregar",
     ]
 
+    number_words = [
+        "un",
+        "una",
+        "uno",
+        "dos",
+        "tres",
+        "cuatro",
+        "cinco",
+        "seis",
+        "siete",
+        "ocho",
+        "nueve",
+        "diez",
+    ]
+
     has_order_word = any(word in text for word in order_words)
-    has_number = any(char.isdigit() for char in text)
+
+    has_number = bool(re.search(r"\b\d+\b", text)) or any(
+        re.search(rf"\b{word}\b", text) for word in number_words
+    )
 
     return has_order_word and has_number
 
@@ -90,8 +122,31 @@ def process_order(message: str) -> dict:
 
             if not is_valid:
                 order_data = extract_order_from_text(message)
+                 
         else:
             order_data = extract_order_from_text(message)
+
+        if order_data.get("estado") == "mensaje_no_pedido":
+            log_info(
+                "ORDER_IGNORED_NON_ORDER_MESSAGE",
+                f"Mensaje ignorado por extractor: {message}",
+            )
+            return {
+                "id": None,
+                "cliente": None,
+                "telefono": None,
+                "zona": None,
+                "direccion": None,
+                "productos": [],
+                "urgencia": "media",
+                "hora_limite": None,
+                "observaciones": message,
+                "estado": "mensaje_no_pedido",
+                "score_prioridad": 0,
+                "errores": [
+                    "No se detectó un pedido válido. Indique producto y cantidad."
+                ],
+            }
 
         is_valid, errors = validate_order(order_data)
 
